@@ -1,6 +1,10 @@
-function History(){
+function History({history}){
+    
+    
     return(
-        <p>History go here!</p>
+        <>
+        {history.map((card)=> <h4>{card.name}</h4> )}
+        </>
     )
 }
 
