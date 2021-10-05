@@ -45,7 +45,7 @@ function CardContainer(){
             <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
             {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
             {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
-            {readCard === 'history'? cardHistory.map((c) => <Card card={c}/>) : null }
+            
         </div>
         </>
     )
