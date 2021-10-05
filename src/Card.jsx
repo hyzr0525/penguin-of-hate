@@ -1,7 +1,16 @@
-function Card(){
+
+
+function Card({cards}){
+
 
 return(
-    <p>Im a card!</p>
+    <div>
+    <img src={cards.name_short} />
+    <p>{cards.name}</p>
+    <p>{cards.type}</p>
+    <p>{cards.desc}</p>
+    <hr/>
+    </div>
 )
 }
 

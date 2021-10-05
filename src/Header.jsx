@@ -1,6 +1,9 @@
+
+
 function Header(){
+    
     return(
-        <h1>Tarot Reader Beta Version</h1>
+        <h1 className="Header">Tarot Reader Beta Version</h1>
     )
 }
 

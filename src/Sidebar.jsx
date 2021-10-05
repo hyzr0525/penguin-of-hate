@@ -1,9 +1,13 @@
 import History from "./History"
+import "./App.css"
 
-function Sidebar(){
+
+function Sidebar({cards}){
 
     return(
-        <p>I am a sidebar</p>
+        <div>
+        <p>{cards.name}</p>
+        </div>
     )
 }
 
