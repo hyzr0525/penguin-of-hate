@@ -6,7 +6,7 @@ function Sidebar({cards}){
 
     return(
         <div>
-        <p>{cards.name}</p>
+        <p className="SidebarList">{cards.name}</p>
         </div>
     )
 }

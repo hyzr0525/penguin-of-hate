@@ -7,11 +7,12 @@ function CardContainer({cardData}){
 
     return (
         <>
+         <div className="SideBar">
+            {cardData.map(cards => <Sidebar cards={cards}/>)}
+        </div>
+
         <div className="MainContent">
         {cardData.map(cards => <Card cards= {cards}/>)}
-        </div>
-        <div className="SideBar">
-            {cardData.map(cards => <Sidebar cards={cards}/>)}
         </div>
         </>
     )
