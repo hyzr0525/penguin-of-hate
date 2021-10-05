@@ -9,6 +9,7 @@ function CardContainer(){
     const URL = "http://localhost:4000/cards"
     const [cardData, setCardData] = useState([])
     const [readCard , setReadCard] = useState('')
+    const [cardHistory, setCardHistory] = useState([])
     //variables
     const randomCardData = cardData[Math.floor(Math.random() * cardData.length)]
     
@@ -18,7 +19,12 @@ function CardContainer(){
     function showCard(e){
         setReadCard(e.target.name)
     }
-
+    
+    function cardSaver(card){
+        setCardHistory([...cardHistory, card])
+        setReadCard('history')
+    }
+    console.log(cardHistory)
 
     //init fetch
     useEffect(()=>{
@@ -38,7 +44,8 @@ function CardContainer(){
             <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
             <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
             {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
-            {readCard === 'single'? <Card card ={randomCardData}/> : null}
+            {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
+            {readCard === 'history'? cardHistory.map((c) => <Card card={c}/>) : null }
         </div>
         </>
     )
