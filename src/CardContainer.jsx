@@ -44,3 +44,5 @@ function CardContainer(){
 }
 
 export default CardContainer
+
+// History tracker: set a state to an array, and then add cards to said array. Spread the array each time so that the info is saved. 
