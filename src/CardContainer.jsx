@@ -37,7 +37,7 @@ function CardContainer(){
     return (
         <>
          <div className="SideBar">
-            {cardData.map(cards => <Sidebar cards={cards}/>)}
+            <Sidebar cards={cardData} history={cardHistory}/>
         </div>
 
         <div className="MainContent">
@@ -45,7 +45,7 @@ function CardContainer(){
             <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
             {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
             {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
-            
+
         </div>
         </>
     )
