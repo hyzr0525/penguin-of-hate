@@ -1,14 +1,29 @@
+import cardImage from './cardImages/ar03.jpg'
+import {useState} from 'react'
+
+function Card({card}){
+const [savedCard, setSavedCard] = useState()
+const emptyCard = {
+    "name":"",
+    "type":"",
+    "meaning_up":"",
+    "meaning_rev":"",
+    "desc":"",
 
 
-function Card({cards}){
 
+}
 
 return(
     <div>
-    <img src={cards.name_short} />
-    <p>{cards.name}</p>
-    <p>{cards.type}</p>
-    <p>{cards.desc}</p>
+    <img src = {cardImage} />
+    <br/>
+    <button>Save to History</button>
+    <h2>{card.value_int}</h2>
+    <p><em>{card.name}</em></p>
+    <p>Arcana: {card.type}</p>
+    <p>Meaning: {card.meaning_up}</p>
+    <p>Card Description: {card.desc}</p>
     <hr/>
     </div>
 )

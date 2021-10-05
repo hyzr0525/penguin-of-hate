@@ -1,5 +1,4 @@
 import History from "./History"
-import "./App.css"
 
 
 function Sidebar({cards}){
