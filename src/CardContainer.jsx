@@ -4,6 +4,7 @@ import "./App.css"
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 import {Route, Switch} from 'react-router-dom'
+import EachCard from "./EachCard";
 
 
 
@@ -37,20 +38,30 @@ function CardContainer(){
     .then(data => setCardData(data))
     },[])
 
+   
 
     return (
         <>
+        
          <div className="SideBar">
             <Sidebar cards={cardData} history={cardHistory}/>
-        </div>
+         </div>
+        <Switch>
+            <Route exact path="/">
+             <div className="MainContent">
+                 <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
+                  <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
+                   {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
+                 {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
+             </div>
+            </Route>
 
-        <div className="MainContent">
-            <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
-            <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
-            {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
-            {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
+            <Route exact path="/eachCard">
+                <EachCard />
+            </Route>
 
-        </div>
+            
+        </Switch>
         </>
     )
 }

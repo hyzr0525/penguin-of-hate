@@ -1,6 +1,7 @@
 {
     "cards": [
       {
+        "id": 1,
         "type": "major",
         "name_short": "ar01",
         "name": "The Magician",
