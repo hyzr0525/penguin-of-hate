@@ -2,7 +2,6 @@ import Card from "./Card"
 import Sidebar from "./Sidebar"
 import "./App.css"
 import React, {useState, useEffect} from 'react';
-import styled from "styled-components";
 import {Route, Switch} from 'react-router-dom'
 import EachCard from "./EachCard";
 
@@ -11,12 +10,13 @@ import EachCard from "./EachCard";
 
 function CardContainer(){
     // states
-    const URL = "http://localhost:4000/cards"
     const [cardData, setCardData] = useState([])
     const [readCard , setReadCard] = useState('')
     const [cardHistory, setCardHistory] = useState([])
     
     //variables
+    const historyURL = 'http://localhost:4000/history'
+    const URL = "http://localhost:4000/cards"
     const randomCardData = cardData[Math.floor(Math.random() * cardData.length)]
     
 
@@ -27,17 +27,48 @@ function CardContainer(){
     }
     
     function cardSaver(card){
+        
+        fetch(historyURL, {
+            method : 'POST',
+      headers: {
+        "Content-Type": 'application/json',
+      },
+      body: JSON.stringify(card)
+        })
+        .then(res => res.json())
+        .then(data => {
         setCardHistory([...cardHistory, card])
         setReadCard('history')
+        })
     }
-    console.log(cardHistory)
+    
+    function DeleteCard(card){
+        fetch(`${historyURL}/${card.id}`,{
+            method : 'DELETE'
+        })
+        .then(res=>res.json)
+        .then(data => {
+            const filteredCards = cardHistory.filter(c => c.id !== card.id)  
+            setCardHistory(filteredCards)
+        })
+    }
 
     //init fetch
     useEffect(()=>{
     fetch(URL)
     .then(res => res.json())
     .then(data => setCardData(data))
-    },[])
+    
+    
+     fetch(historyURL)
+    .then(res => res.json())
+    .then(data => {
+        setCardHistory(data)
+    })
+    } , []
+    )
+    
+    
 
    
 
@@ -45,7 +76,7 @@ function CardContainer(){
         <>
         
          <div className="SideBar">
-            <Sidebar cards={cardData} history={cardHistory}/>
+            <Sidebar cards={cardData} history={cardHistory} setReadCard={setReadCard}/>
          </div>
         <Switch>
             <Route exact path="/">
@@ -53,7 +84,8 @@ function CardContainer(){
                  <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
                   <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
                    {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
-                 {readCard === 'single'? <Card cardSaver={cardSaver} card ={randomCardData}/> : null}
+                 {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} /> : null}
+                 {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
              </div>
             </Route>
 

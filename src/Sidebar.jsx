@@ -4,7 +4,7 @@ import {useState} from "react"
 import {NavLink} from "react-router-dom"
 
 
-function Sidebar({cards , history}){
+function Sidebar({cards , history, setReadCard}){
 
     const [searchKeyWord, setSearchKeyWord] = useState("")
 
@@ -12,13 +12,22 @@ function Sidebar({cards , history}){
         <>
             
             <h3>History</h3>
-            <History history={history}/>
+            <History history={history} setReadCard={setReadCard}/>
+            <h3>Card Search</h3>
             <Search />
             <h3>Card List</h3>
 
-         <NavLink to={'/eachCard/1'}>
-            {cards.map((card)=> <ul className="SidebarList">{card.name}</ul>)}
-         </NavLink>
+         
+             <ul>
+            {cards.map((card) => {
+               <NavLink to={'/eachCard/1'}> 
+                 <li key={card.id} className="SidebarList">{card.name}</li>
+                 </NavLink>
+                })
+                
+            }
+            </ul>
+         
         </>
     )
 }
