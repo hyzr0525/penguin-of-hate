@@ -76,7 +76,7 @@ function CardContainer(){
         <>
         
          <div className="SideBar">
-           {cardData.map( cards=> <Sidebar cards={cards} history={cardHistory} setReadCard={setReadCard}/>)}
+           <Sidebar cards={cardData} history={cardHistory} setReadCard={setReadCard}/>
          </div>
         <Switch>
             <Route exact path="/">

@@ -7,9 +7,8 @@ import {NavLink} from "react-router-dom"
 function Sidebar({cards , history, setReadCard}){
 
     const [searchKeyWord, setSearchKeyWord] = useState("")
-    
-    console.log(cards.name)
-
+    const [cardID, setCardID] = useState("")
+   
     return(
     <>
             
@@ -19,14 +18,11 @@ function Sidebar({cards , history, setReadCard}){
         <Search />
         <h3>Card List</h3>
 
-        
+        <NavLink to={"/"}>
              
-        <NavLink to={`/eachCard/1`}>
-             
-            
-             <p key={cards.id} className="SidebarList">{cards.name}</p>
-            
-             
+        {cards.map((card) =>
+             <p key={card.id} className="SidebarList">{card.name}</p>
+        )}
         </NavLink>
     </>
     )
