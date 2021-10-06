@@ -1,4 +1,3 @@
-
 import {useState} from 'react'
 
 function Card({card , id , cardButton}){
@@ -20,7 +19,7 @@ function createButton(){
 }
 
 return(
-    <div>
+    <div className='cardDiv'>
     <img src = {cardImage} alt={card.name} />
     <br/>
     {createButton()}

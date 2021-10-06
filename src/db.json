@@ -738,31 +738,41 @@
       "id": 63
     }
   ],
-
   "history": [
     {
-      "name": "Five of Cups",
-      "name_short": "cu05",
-      "value": "five",
-      "value_int": 5,
+      "name": "Knight of Cups",
+      "name_short": "cukn",
+      "value": "knight",
+      "value_int": 12,
       "suit": "cups",
       "type": "minor",
-      "meaning_up": "ure, looking sideways at three prone cups two others stand upright behind him; a bridge is in the background, leading to a small keep or holding. Divanatory Meanings: It is a card of loss, but something remains over; three have been taken, but two are left; it is a card of inheritance, patrimony, transmission, but not corresponding to expectations; with some interpreters it is a card of marriage, but not without bitterness or frustration.",
-      "meaning_rev": "News, alliances, affinity, consanguinity, ancestry, return, false projects.",
-      "desc": "A dark, cloaked figure, looking sideways at three prone cups two others stand upright behind him; a bridge is in the background, leading to a small keep or holding. Divanatory Meanings: It is a card of loss, but something remains over; three have been taken, but two are left; it is a card of inheritance, patrimony, transmission, but not corresponding to expectations; with some interpreters it is a card of marriage, but not without bitterness or frustration. Reversed: News, alliances, affinity, consanguinity, ancestry, return, false projects",
-      "id": 3
+      "meaning_up": "Arrival, approach--sometimes that of a messenger; advances, proposition, demeanour, invitation, incitement.",
+      "meaning_rev": "Trickery, artifice, subtlety, swindling, duplicity, fraud.",
+      "desc": "Graceful, but not warlike; riding quietly, wearing a winged helmet, referring to those higher graces of the imagination which sometimes characterize this card. He too is a dreamer, but the images of the side of sense haunt him in his vision.",
+      "id": 27
     },
     {
-      "name": "Six of Pentacles",
-      "name_short": "pe06",
-      "value": "six",
-      "value_int": 6,
-      "suit": "pentacles",
+      "name": "Queen of Cups",
+      "name_short": "cuqu",
+      "value": "queen",
+      "value_int": 13,
+      "suit": "cups",
       "type": "minor",
-      "meaning_up": "Presents, gifts, gratification another account says attention, vigilance now is the accepted time, present prosperity, etc.",
-      "meaning_rev": "Desire, cupidity, envy, jealousy, illusion.",
-      "desc": "A person in the guise of a merchant weighs money in a pair of scales and distributes it to the needy and distressed. It is a testimony to his own success in life, as well as to his goodness of heart.",
-      "id": 4
+      "meaning_up": "Good, fair woman; honest, devoted woman, who will do service to the Querent; loving intelligence, and hence the gift of vision; success, happiness, pleasure; also wisdom, virtue; a perfect spouse and a good mother.",
+      "meaning_rev": "The accounts vary; good woman; otherwise, distinguished woman but one not to be trusted; perverse woman; vice, dishonour, depravity.",
+      "desc": "Beautiful, fair, dreamy--as one who sees visions in a cup. This is, however, only one of her aspects; she sees, but she also acts, and her activity feeds her dream.",
+      "id": 29
+    },
+    {
+      "type": "major",
+      "name_short": "ar02",
+      "name": "The High Priestess",
+      "value": "2",
+      "value_int": 2,
+      "meaning_up": "Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent, if male; the Querent herself, if female; silence, tenacity; mystery, wisdom, science.",
+      "meaning_rev": "Passion, moral or physical ardour, conceit, surface knowledge.",
+      "desc": "She has the lunar crescent at her feet, a horned diadem on her head, with a globe in the middle place, and a large solar cross on her breast. The scroll in her hands is inscribed with the word Tora, signifying the Greater Law, the Secret Law and the second sense of the Word. It is partly covered by her mantle, to shew that some things are implied and some spoken. She is seated between the white and black pillars--J. and B.--of the mystic Temple, and the veil of the Temple is behind her: it is embroidered with palms and pomegranates. The vestments are flowing and gauzy, and the mantle suggests light--a shimmering radiance. She has been called occult Science on the threshold of the Sanctuary of Isis, but she is really the Secret Church, the House which is of God and man. She represents also the Second Marriage of the Prince who is no longer of this world; she is the spiritual Bride and Mother, the daughter of the stars and the Higher Garden of Eden. She is, in fine, the Queen of the borrowed light, but this is the light of all. She is the Moon nourished by the milk of the Supernal Mother.\nIn a manner, she is also the Supernal Mother herself--that is to say, she is the bright reflection. It is in this sense of reflection that her truest and highest name in bolism is Shekinah--the co-habiting glory. According to Kabalism, there is a Shekinah both above and below. In the superior world it is called Binah, the Supernal Understanding which reflects to the emanations that are beneath. In the lower world it is MaIkuth--that world being, for this purpose, understood as a blessed Kingdom that with which it is made blessed being the Indwelling Glory. Mystically speaking, the Shekinah is the Spiritual Bride of the just man, and when he reads the Law she gives the Divine meaning. There are some respects in which this card is the highest and holiest of the Greater Arcana.",
+      "id": 63
     }
   ]
 }
