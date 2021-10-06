@@ -5,25 +5,32 @@ import {useParams} from 'react-router-dom'
 
 function EachCard() {
 
-    const [eachCards, setEachCards] = useState([])
+    const [eachCards, setEachCards] = useState({name_short: "ar19"})
     const [isLoaded, setIsLoaded] =useState(false);
     const image = require.context('./cardImages', true)
-    const cardImage = image(`./${eachCards.name_short}.jpg`).default
+
+    //let cardImage = ""
+
+    //if (eachCards.name_short) {
+      const cardImage = image(`./${eachCards.name_short}.jpg`).default    
+    //}
+
+    console.log(eachCards);
 
     const id = useParams().id
-
+    console.log(id)
     useEffect(() => {
         fetch(`http://localhost:4000/cards/${id}`)
         .then(res =>res.json())
         .then(data => {
             return setEachCards(data), setIsLoaded(true)})
-    },[])
+    },[id])
     
     if (!isLoaded) return <h1>Loading...</h1>
 
     return (
         <div className="EachCard">
-            <img src = {cardImage} alt={eachCards.name} />
+            <img src={cardImage} alt={eachCards.name} />
             <h2>{eachCards.value_int}</h2>
             <p><em>{eachCards.name}</em></p>
             <p>Arcana: {eachCards.type}</p>

@@ -8,6 +8,8 @@ function Sidebar({cards , history, setReadCard}){
 
     const [searchKeyWord, setSearchKeyWord] = useState("")
     const [cardID, setCardID] = useState("")
+
+
    
     return(
     <>
@@ -15,17 +17,21 @@ function Sidebar({cards , history, setReadCard}){
         <h3>History</h3>
         <History history={history} setReadCard={setReadCard}/>
         <h3>Card Search</h3>
-        <Search />
+        <Search setSearchKeyWord={setSearchKeyWord}/>
         <h3>Card List</h3>
 
-        <NavLink to={"/"}>
+        
              
         {cards.map((card) =>
-             <p key={card.id} className="SidebarList">{card.name}</p>
+        <NavLink to={`/eachCard/${card.id}`}>
+             <p key={card.id}  className="SidebarList">{card.name}</p>
+         </NavLink>    
         )}
-        </NavLink>
+        
     </>
     )
 }
 
 export default Sidebar
+
+//id={setCardID(card.id)}  
