@@ -15,6 +15,7 @@ function CardContainer(){
     const [cardData, setCardData] = useState([])
     const [readCard , setReadCard] = useState('')
     const [cardHistory, setCardHistory] = useState([])
+    
     //variables
     const randomCardData = cardData[Math.floor(Math.random() * cardData.length)]
     
@@ -56,7 +57,7 @@ function CardContainer(){
              </div>
             </Route>
 
-            <Route exact path="/eachCard">
+            <Route exact path="/eachCard/1">
                 <EachCard />
             </Route>
 
