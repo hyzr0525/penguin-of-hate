@@ -1,7 +1,7 @@
 
 import {useState} from 'react'
 
-function Card({card , cardSaver}){
+function Card({card , id , cardButton}){
 const [savedCard, setSavedCard] = useState(card)
 const image = require.context('./cardImages', true)
 const cardImage = image(`./${card.name_short}.jpg`).default
@@ -9,15 +9,21 @@ const cardImage = image(`./${card.name_short}.jpg`).default
 
 function saveCard(){
     setSavedCard(card)
-    cardSaver(savedCard)
+    cardButton(savedCard)
 }
-
+function createButton(){
+    if(id === 'history'){
+    return (<button onClick={()=>cardButton(card)}>Delete Card</button>)
+    }else{
+        return ( <button onClick={saveCard}>Save Card to History</button> )
+    }
+}
 
 return(
     <div>
-    <img src = {cardImage} />
+    <img src = {cardImage} alt={card.name} />
     <br/>
-    <button onClick={saveCard}>Save to History</button>
+    {createButton()}
     <h2>{card.value_int}</h2>
     <p><em>{card.name}</em></p>
     <p>Arcana: {card.type}</p>
