@@ -89,6 +89,10 @@ console.log(historyURL)
                  {readCard === 'three'? threeCardData.map((card)=> <Card card={card} cardButton={cardSaver} currentUser={currentUser}/>) : null} 
                  {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} currentUser={currentUser} /> : null}
                  {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
+                 <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
+                 <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
+
+
              </div>
             </Route>
 

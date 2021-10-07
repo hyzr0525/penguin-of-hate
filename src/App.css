@@ -1,26 +1,32 @@
 .App{
     top:0;
-    justify-content: center;
-    flex-wrap: wrap;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-image: url(https://cdn.pixabay.com/photo/2016/11/18/22/58/stars-1837306_960_720.jpg);
+    background-image:url(./backgroundImage/starrySky.jpg);
+    background-position: center;
     background-size:cover;
+
     
-
 }
-
 
 .MainContent{
     display:flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
 
 .Header{
     background-image: url(https://www.onlinefabricstore.com/images/product-images/xl/SVEL637_1.jpg);
@@ -81,8 +87,12 @@ body{
     padding: 15px;
     width: 25%;
     height: 25%;
-    box-shadow: 5px 5px 5px 5px gray ;
+    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.541);
     background-color:rgb(230, 234, 236);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     
 }
 
@@ -97,8 +107,9 @@ button{
     height:10%;
     color:white;
     background-color:slategrey;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 0;
+<<<<<<< HEAD
     margin-left:20%;
     
     
@@ -114,4 +125,18 @@ button{
 
 .hidden{
     display:none;
+=======
+    font-size: 15px;
+    padding: 5px;
+    margin:20px
+}
+
+button:hover{
+    background-color: #8F63D7;
+    color:white;
+}
+
+#saveHisBtn{
+    background-color:#4B4453;
+>>>>>>> 6a490849fac7a2706e75292ec590ab7cb1f2cbee
 }

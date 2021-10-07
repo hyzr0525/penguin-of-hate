@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import "./App.css"
 
 function Card({card , id , cardButton, currentUser}){
 const [savedCard, setSavedCard] = useState(card)
