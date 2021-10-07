@@ -15,10 +15,9 @@ function EachCard() {
       const cardImage = image(`./${eachCards.name_short}.jpg`).default    
     //}
 
-    console.log(eachCards);
 
     const id = useParams().id
-    console.log(id)
+    
     useEffect(() => {
         fetch(`http://localhost:4000/cards/${id}`)
         .then(res =>res.json())
@@ -29,7 +28,7 @@ function EachCard() {
     if (!isLoaded) return <h1>Loading...</h1>
 
     return (
-        <div className="EachCard">
+        <div className='cardDiv'>
             <img src={cardImage} alt={eachCards.name} />
             <h2>{eachCards.value_int}</h2>
             <p><em>{eachCards.name}</em></p>

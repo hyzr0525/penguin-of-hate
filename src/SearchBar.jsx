@@ -2,6 +2,7 @@ import React from "react";
 
 function Search({setSearchKeyWord}) {
 
+  
   return (
     <div className="searchbar">
       <input

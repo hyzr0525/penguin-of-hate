@@ -7,9 +7,10 @@ import {NavLink} from "react-router-dom"
 function Sidebar({cards , history, setReadCard}){
 
     const [searchKeyWord, setSearchKeyWord] = useState("")
-    const [cardID, setCardID] = useState("")
 
-
+    const filterCards = cards.filter((filteredCard) =>{
+        return filteredCard.name.toLowerCase().includes(searchKeyWord.toLowerCase())
+    })
    
     return(
     <>
@@ -22,7 +23,7 @@ function Sidebar({cards , history, setReadCard}){
 
         
              
-        {cards.map((card) =>
+        {filterCards.map((card) =>
         <NavLink to={`/eachCard/${card.id}`}>
              <p key={card.id}  className="SidebarList">{card.name}</p>
          </NavLink>    
@@ -33,5 +34,3 @@ function Sidebar({cards , history, setReadCard}){
 }
 
 export default Sidebar
-
-//id={setCardID(card.id)}  
