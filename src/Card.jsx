@@ -1,13 +1,15 @@
 import {useState} from 'react'
 
-function Card({card , id , cardButton}){
+function Card({card , id , cardButton, currentUser}){
 const [savedCard, setSavedCard] = useState(card)
 const image = require.context('./cardImages', true)
 const cardImage = image(`./${card.name_short}.jpg`).default
 
 
 function saveCard(){
-    setSavedCard(card)
+    // setSavedCard(card)
+    setSavedCard({ ...card, userId:currentUser.id})
+    console.log(savedCard)
     cardButton(savedCard)
 }
 function createButton(){

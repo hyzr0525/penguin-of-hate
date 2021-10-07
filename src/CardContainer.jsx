@@ -13,15 +13,16 @@ function CardContainer(){
     const [cardData, setCardData] = useState([])
     const [readCard , setReadCard] = useState('')
     const [cardHistory, setCardHistory] = useState([])
+    const [currentUser, setCurrentUser] = useState([{}])
     
     //variables
-    const historyURL = 'http://localhost:4000/history'
+    const historyURL = `http://localhost:4000/users/${currentUser.id}/history`
     const URL = "http://localhost:4000/cards"
     const randomCardData = cardData[Math.floor(Math.random() * cardData.length)];
     const threeCardData = [cardData[Math.floor(Math.random() * cardData.length)] , cardData[Math.floor(Math.random() * cardData.length)] , cardData[Math.floor(Math.random() * cardData.length)] ]
     
-
-
+console.log(currentUser)
+console.log(historyURL)
      
     // functions
     function showCard(e){
@@ -55,6 +56,8 @@ function CardContainer(){
         })
     }
 
+  
+
     //init fetch
     useEffect(()=>{
     fetch(URL)
@@ -73,8 +76,8 @@ function CardContainer(){
     return (
         <>
         
-         <div className="SideBar">
-           <Sidebar cards={cardData} history={cardHistory} setReadCard={setReadCard}/>
+         <div className="SideBar" >
+           <Sidebar cards={cardData} history={cardHistory} setReadCard={setReadCard} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
          </div>
         <Switch>
             <Route exact path="/">
@@ -83,8 +86,8 @@ function CardContainer(){
                      <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
                      <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
                      <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button>
-                 {readCard === 'three'? threeCardData.map((card)=> <Card card={card} cardButton={cardSaver}/>) : null} 
-                 {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} /> : null}
+                 {readCard === 'three'? threeCardData.map((card)=> <Card card={card} cardButton={cardSaver} currentUser={currentUser}/>) : null} 
+                 {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} currentUser={currentUser} /> : null}
                  {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
              </div>
             </Route>

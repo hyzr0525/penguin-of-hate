@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function UserForms({show, setShow}){
+function UserForms({show, setShow, currentUser, setCurrentUser}){
+    const [logged, setLogged] = useState(false)  
     const userUrl = "http://localhost:4000/users"
-    const [currentUser, setCurrentUser] = useState(null)
     const [input , setInput] = useState({
         "username" : "",
         "password" : "",
@@ -38,12 +38,13 @@ function UserForms({show, setShow}){
     .then(users => {
         const user = users.filter((user)=> user.username == input.username)
         setCurrentUser(user)
+        setLogged(true)
         // user.password === input.password? setCurrentUser(user) : alert("Password does not Match")
     } )
     
     }
     console.log(currentUser)
-    if (currentUser !== null){
+    if (logged){
         return(
             <>
         <h4>Welcome, {input.username}</h4>

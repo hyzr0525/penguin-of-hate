@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom"
 import UserForms from "./UserForms"
 
 
-function Sidebar({cards , history, setReadCard}){
+function Sidebar({cards , history, setReadCard, currentUser, setCurrentUser}){
     const [show ,setShow] = useState(false) 
     const [searchKeyWord, setSearchKeyWord] = useState("")
 
@@ -17,7 +17,7 @@ function Sidebar({cards , history, setReadCard}){
     <>
         <h3>User Login</h3>
         <button onClick={()=>setShow(!show)}>{!show? 'New User?' : "Returning User" }</button>
-        <UserForms show={show} setShow={setShow}/>    
+        <UserForms show={show} setShow={setShow} currentUser={currentUser} setCurrentUser={setCurrentUser}/>    
         <h3>History</h3>
         <History history={history} setReadCard={setReadCard}/>
         <h3>Card Search</h3>

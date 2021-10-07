@@ -23,16 +23,20 @@ body{
 }
 
 .Header{
-    display: flex;
+    background-image: url(https://www.onlinefabricstore.com/images/product-images/xl/SVEL637_1.jpg);
     flex-wrap: wrap;
     color:white;
-    margin: 20px 0% 0% 35%;
+    margin-top: 0;
     padding: 30px;
+    text-align:center;
+    text-shadow: 2px 2px 2px #475271;
+    font-variant: small-caps;
+    font-size:300%;
 }
 
 .SideBar {
     height: 100vh;
-    width: 180px;
+    width: 11%;
     top:0;
     position: fixed;
     padding-top: 0;
@@ -42,7 +46,6 @@ body{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow-y: scroll;
-
 }
 
 .SidebarList {
@@ -71,8 +74,8 @@ body{
 
 .cardDiv{
     border-radius: 10px;
-    margin: 10%;
-    
+    margin: 2%;
+    display: flexbox;
     margin-left:auto;
     margin-right: auto;
     padding: 15px;
@@ -96,10 +99,19 @@ button{
     background-color:slategrey;
     border-radius: 8px;
     border: 0;
-    margin-left: 20%;
-    margin-bottom: 20%;
+    margin-left:20%;
+    
+    
+}
+
+.SideBar button{
+    height: 5%;
 }
 
 #saveHisBtn{
     background-color:purple;
+}
+
+.hidden{
+    display:none;
 }
