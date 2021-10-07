@@ -77,11 +77,14 @@ function CardContainer(){
         <Switch>
             <Route exact path="/">
              <div className="MainContent">
-                 <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
-                  <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
+                
                    {/* <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button> */}
                  {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} /> : null}
                  {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
+                 <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
+                 <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
+
+
              </div>
             </Route>
 

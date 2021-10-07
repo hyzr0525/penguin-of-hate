@@ -14,7 +14,7 @@ function Sidebar({cards , history, setReadCard}){
     })
    
     return(
-    <>
+    <div>
         <h3>User Login</h3>
         <button onClick={()=>setShow(!show)}>{!show? 'New User?' : "Returning User" }</button>
         <UserForms show={show} setShow={setShow}/>    
@@ -32,7 +32,7 @@ function Sidebar({cards , history, setReadCard}){
          </NavLink>    
         )}
         
-    </>
+    </div>
     )
 }
 
