@@ -738,7 +738,20 @@
       "id": 63
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "name": "Queen of Cups",
+      "name_short": "cuqu",
+      "value": "queen",
+      "value_int": 13,
+      "suit": "cups",
+      "type": "minor",
+      "meaning_up": "Good, fair woman; honest, devoted woman, who will do service to the Querent; loving intelligence, and hence the gift of vision; success, happiness, pleasure; also wisdom, virtue; a perfect spouse and a good mother.",
+      "meaning_rev": "The accounts vary; good woman; otherwise, distinguished woman but one not to be trusted; perverse woman; vice, dishonour, depravity.",
+      "desc": "Beautiful, fair, dreamy--as one who sees visions in a cup. This is, however, only one of her aspects; she sees, but she also acts, and her activity feeds her dream.",
+      "id": 29
+    }
+  ],
   "users": [
     {
       "username": "ev3rythingevil",

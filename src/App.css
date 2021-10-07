@@ -99,8 +99,6 @@ body{
 }
 
 button{
-    display:flex;
-    flex-direction: row;
     height:10%;
     color:white;
     background-color:slategrey;
