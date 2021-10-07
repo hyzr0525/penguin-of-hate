@@ -21,9 +21,7 @@ function CardContainer(){
     const randomCardData = cardData[Math.floor(Math.random() * cardData.length)];
     const threeCardData = [cardData[Math.floor(Math.random() * cardData.length)] , cardData[Math.floor(Math.random() * cardData.length)] , cardData[Math.floor(Math.random() * cardData.length)] ]
     
-console.log(currentUser)
-console.log(historyURL)
-     
+
     // functions
     function showCard(e){
         setReadCard(e.target.name)
@@ -89,9 +87,7 @@ console.log(historyURL)
                  {readCard === 'three'? threeCardData.map((card)=> <Card card={card} cardButton={cardSaver} currentUser={currentUser}/>) : null} 
                  {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} currentUser={currentUser} /> : null}
                  {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
-                 <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
-                 <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
-
+                 
 
              </div>
             </Route>

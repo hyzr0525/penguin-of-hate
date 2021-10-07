@@ -109,7 +109,6 @@ button{
     background-color:slategrey;
     border-radius: 5px;
     border: 0;
-<<<<<<< HEAD
     margin-left:20%;
     
     
@@ -125,18 +124,4 @@ button{
 
 .hidden{
     display:none;
-=======
-    font-size: 15px;
-    padding: 5px;
-    margin:20px
-}
-
-button:hover{
-    background-color: #8F63D7;
-    color:white;
-}
-
-#saveHisBtn{
-    background-color:#4B4453;
->>>>>>> 6a490849fac7a2706e75292ec590ab7cb1f2cbee
 }
