@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
+    
 }
 
 body{
@@ -11,6 +12,7 @@ body{
     padding: 0;
     background-image: url(https://cdn.pixabay.com/photo/2016/11/18/22/58/stars-1837306_960_720.jpg);
     background-size:cover;
+    
 
 }
 
@@ -39,20 +41,31 @@ body{
     scrollbar-width: small;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    overflow-y: scroll;
+
 }
 
 .SidebarList {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 15px;
     margin: 0px;
     color:white;
-    font-family:Roboto Slab, serif;
+
 }
 
 .SidebarList:hover{
     background-color:#6877A1;
-    padding: 10px;
+    padding: 15px;
     color:white;
+}
+
+::-webkit-scrollbar {
+    width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:slategrey;
+    border: radius 10px;
 }
 
 
