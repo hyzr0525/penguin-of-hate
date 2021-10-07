@@ -14,7 +14,7 @@ function createButton(){
     if(id === 'history'){
     return (<button onClick={()=>cardButton(card)}>Delete Card</button>)
     }else{
-        return ( <button onClick={saveCard}>Save Card to History</button> )
+        return ( <button id="saveHisBtn" onClick={saveCard}>Save Card to History</button> )
     }
 }
 

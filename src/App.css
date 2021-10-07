@@ -1,33 +1,44 @@
 .App{
-    margin-left: 185px;
+    top:0;
     justify-content: center;
     flex-wrap: wrap;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
     background-image: url(https://cdn.pixabay.com/photo/2016/11/18/22/58/stars-1837306_960_720.jpg);
     background-size:cover;
-    height: 100%;
+
 }
 
 
 .MainContent{
     display:flex;
     flex-wrap: wrap;
-    
-
 }
 
 .Header{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 185px;
+    color:white;
+    margin: 20px 0% 0% 50%;
+    padding: 30px;
 }
 
 .SideBar {
-    height: auto;
+    height: 100vh;
     width: 180px;
-    position: absolute;
-    left: 0px;
-    background-color: slategrey;
+    top:0;
+    position: fixed;
+    padding-top: 0;
+    left: 0;
+    background-color:#475271;
+    scrollbar-width: small;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .SidebarList {
@@ -39,25 +50,25 @@
 }
 
 .SidebarList:hover{
-    background-color:white;
+    background-color:#6877A1;
     padding: 10px;
-    color:slategrey;
+    color:white;
 }
 
 
 .cardDiv{
-   
-    border: 1px 1px 1px 1px black;
-    margin: 20px;
+    border-radius: 10px;
+    margin: 50px;
     padding: 15px;
-    width: 50%;
-    box-shadow: 2px 2px 2px 2px black ;
+    width: 25%;
+    height: 25%;
+    box-shadow: 5px 5px 5px 5px gray ;
     background-color:rgb(230, 234, 236);
     
 }
 
 .cardDiv img{
-    width:50%;
+    width:100%;
 }
 .cardDiv button{
     height: 3%;
@@ -70,5 +81,9 @@ button{
     color:white;
     background-color:slategrey;
     border-radius: 8px;
-    
+    border: 0;
+}
+
+#saveHisBtn{
+    background-color:purple;
 }
