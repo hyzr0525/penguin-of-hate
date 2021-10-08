@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-left:8%;
     
 }
 
@@ -13,8 +14,8 @@ body{
     margin: 0;
     padding: 0;
     background-image:url(./backgroundImage/starrySky.jpg);
-    background-position: center;
-    background-size:cover;
+    
+    background-size: cover;
 
     
 }
@@ -25,38 +26,58 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-left: 8%;
+    color:white;
 }
 
 
+
 .Header{
-    background-image: url(https://www.onlinefabricstore.com/images/product-images/xl/SVEL637_1.jpg);
+    
     flex-wrap: wrap;
     color:white;
     margin-top: 0;
+    margin-left: 8%;
     padding: 30px;
     text-align:center;
     text-shadow: 2px 2px 2px #475271;
     font-variant: small-caps;
-    font-size:300%;
+    font-size:500%;
 }
 
 .SideBar {
     height: 100vh;
-    width: 11%;
+    width: 200px;
     top:0;
     position: fixed;
     padding-top: 0;
+    padding-left: 20px;
     left: 0;
     background-color:#475271;
-    scrollbar-width: small;
+    opacity: 0.85;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow-y: scroll;
+    color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
+input{
+    
+    color:white;
+    background-color:slategrey;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
 .SidebarList {
     font-size: 15px;
-    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0px;
     color:white;
 
@@ -64,7 +85,7 @@ body{
 
 .SidebarList:hover{
     background-color:#6877A1;
-    padding: 15px;
+
     color:white;
 }
 
@@ -80,27 +101,30 @@ body{
 
 .cardDiv{
     border-radius: 10px;
-    margin: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flexbox;
-    margin-left:auto;
-    margin-right: auto;
     padding: 15px;
     width: 25%;
-    height: 25%;
+    height: 10%;
     box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.541);
-    background-color:rgb(230, 234, 236);
+    background-color:rgba(230, 234, 236, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    color:darkslategray;
+}
+
+.MainContent button{
+    font-size: 20px;
 }
 
 .cardDiv img{
     width:100%;
 }
 .cardDiv button{
-    height: 3%;
+    font-size: 20px;
 }
 
 button{
@@ -109,18 +133,17 @@ button{
     background-color:slategrey;
     border-radius: 5px;
     border: 0;
-    margin-left:20%;
-    
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding:5px;
     
 }
 
-.SideBar button{
-    height: 5%;
+button:hover{
+    background-color:#8F63D7 ;
+
 }
 
-#saveHisBtn{
-    background-color:purple;
-}
 
 .hidden{
     display:none;

@@ -8,6 +8,7 @@ import EachCard from "./EachCard";
 
 
 
+
 function CardContainer(){
     // states
     const [cardData, setCardData] = useState([])
@@ -80,14 +81,17 @@ function CardContainer(){
         <Switch>
             <Route exact path="/">
              <div className="MainContent">
-                
+                 <br/><br/>
+                <h1>Welcome to Tarot Reader Beta Version</h1>
+                <h1>To Get Start, Please Choose a method below:</h1>
                      <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
-                     <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
                      <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button>
+                     
                  {readCard === 'three'? threeCardData.map((card)=> <Card card={card} cardButton={cardSaver} currentUser={currentUser}/>) : null} 
                  {readCard === 'single'? <Card  card ={randomCardData} id={'random'} cardButton={cardSaver} currentUser={currentUser} /> : null}
                  {readCard === 'history'? cardHistory.map((card)=> <Card key={card.id} card={card} id={'history'} cardButton={DeleteCard}/>) : null }
                  
+                 <button name='reset' onClick={(e)=>showCard(e)}>Reset</button>
 
              </div>
             </Route>
