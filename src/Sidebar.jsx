@@ -18,6 +18,7 @@ function Sidebar({cards , history, setReadCard, currentUser, setCurrentUser}){
         <h3>User Login</h3>
         <button onClick={()=>setShow(!show)}>{!show? 'New User?' : "Returning User" }</button>
         <UserForms show={show} setShow={setShow} currentUser={currentUser} setCurrentUser={setCurrentUser}/>    
+        <hr/>
         <h3>History</h3>
         <History history={history} setReadCard={setReadCard}/>
         <h3>Card Search</h3>
