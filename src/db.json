@@ -787,6 +787,57 @@
       "desc": "One seated on her couch in lamentation, with the swords over her. She is as one who knows no sorrow which is like unto hers. It is a card of utter desolation.",
       "id": 61,
       "userId": "undefined"
+    },
+    {
+      "name": "Page of Pentacles",
+      "name_short": "pepa",
+      "value": "page",
+      "value_int": 11,
+      "suit": "pentacles",
+      "type": "minor",
+      "meaning_up": "Application, study, scholarship, reflection another reading says news, messages and the bringer thereof; also rule, management.",
+      "meaning_rev": "Prodigality, dissipation, liberality, luxury; unfavourable news.",
+      "desc": "A youthful figure, looking intently at the pentacle which hovers over his raised hands. He moves slowly, insensible of that which is about him.",
+      "id": 40,
+      "userId": "undefined"
+    },
+    {
+      "name": "Three of Cups",
+      "name_short": "cu03",
+      "value": "three",
+      "value_int": 3,
+      "suit": "cups",
+      "type": "minor",
+      "meaning_up": "The conclusion of any matter in plenty, perfection and merriment; happy issue, victory, fulfilment, solace, healing,",
+      "meaning_rev": "Expedition, dispatch, achievement, end. It signifies also the side of excess in physical enjoyment, and the pleasures of the senses.",
+      "desc": "Maidens in a garden-ground with cups uplifted, as if pledging one another.",
+      "id": 35,
+      "userId": "undefined"
+    },
+    {
+      "type": "major",
+      "name_short": "ar13",
+      "name": "Death",
+      "value": "13",
+      "value_int": 13,
+      "meaning_up": "End, mortality, destruction, corruption also, for a man, the loss of a benefactor for a woman, many contrarieties; for a maid, failure of marriage projects.",
+      "meaning_rev": "Inertia, sleep, lethargy, petrifaction, somnambulism; hope destroyed.",
+      "desc": "The veil or mask of life is perpetuated in change, transformation and passage from lower to higher, and this is more fitly represented in the rectified Tarot by one of the apocalyptic visions than by the crude notion of the reaping skeleton. Behind it lies the whole world of ascent in the spirit. The mysterious horseman moves slowly, bearing a black banner emblazoned with the Mystic Rose, which signifies life. Between two pillars on the verge of the horizon there shines the sun of immortality. The horseman carries no visible weapon, but king and child and maiden fall before him, while a prelate with clasped hands awaits his end.\nThere should be no need to point out that the suggestion of death which I have made in connection with the previous card is, of course, to be understood mystically, but this is not the case in the present instance. The natural transit of man to the next stage of his being either is or may be one form of his progress, but the exotic and almost unknown entrance, while still in this life, into the state of mystical death is a change in the form of consciousness and the passage into a state to which ordinary death is neither the path nor gate. The existing occult explanations of the 13th card are, on the whole, better than usual, rebirth, creation, destination, renewal, and the rest.",
+      "id": 12,
+      "userId": "undefined"
+    },
+    {
+      "name": "Four of Swords",
+      "name_short": "sw04",
+      "value": "four",
+      "value_int": 4,
+      "suit": "swords",
+      "type": "minor",
+      "meaning_up": "Vigilance, retreat, solitude, hermit's repose, exile, tomb and coffin. It is these last that have suggested the design.",
+      "meaning_rev": "Wise administration, circumspection, economy, avarice, precaution, testament.",
+      "desc": "The effigy of a knight in the attitude of prayer, at full length upon his tomb.",
+      "id": 58,
+      "userId": "undefined"
     }
   ],
   "users": [

@@ -15,15 +15,16 @@ function Sidebar({cards , history, setReadCard, currentUser, setCurrentUser}){
    
     return(
     <div>
-        <h3>User Login</h3>
+        <h2>User Login</h2>
         <button onClick={()=>setShow(!show)}>{!show? 'New User?' : "Returning User" }</button>
         <UserForms show={show} setShow={setShow} currentUser={currentUser} setCurrentUser={setCurrentUser}/>    
         <hr/>
-        <h3>History</h3>
+        <h2>History</h2>
         <History history={history} setReadCard={setReadCard}/>
-        <h3>Card Search</h3>
+        <hr/>
+        <h2>Card Search</h2>
         <Search setSearchKeyWord={setSearchKeyWord}/>
-        <h3>Card List</h3>
+        <h2>Card List</h2>
 
         
              
