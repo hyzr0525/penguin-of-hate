@@ -83,8 +83,8 @@ function CardContainer(){
              <div className="MainContent">
                  <br/><br/>
                 <h1>Welcome to Tarot Reader Beta Version</h1>
-                <h1>To Get Start, Please Choose a method below:</h1>
-                
+                <h1>To Get Start, Please Choose a Method Below:</h1>
+
                      <button name='single' onClick={(e)=>showCard(e)}>Get a Reading!</button>
                      <button name='three' onClick={(e)=>showCard(e)}>Three Card Spread</button>
                      

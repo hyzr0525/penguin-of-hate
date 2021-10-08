@@ -838,6 +838,19 @@
       "desc": "The effigy of a knight in the attitude of prayer, at full length upon his tomb.",
       "id": 58,
       "userId": "undefined"
+    },
+    {
+      "name": "Knight of Swords",
+      "name_short": "swkn",
+      "value": "knight",
+      "value_int": 12,
+      "suit": "swords",
+      "type": "minor",
+      "meaning_up": "Skill, bravery, capacity, defence, address, enmity, wrath, war, destruction, opposition, resistance, ruin. There is therefore a sense in which the card signifies death, but it carries this meaning only in its proximity to other cards of fatality.",
+      "meaning_rev": "Imprudence, incapacity, extravagance.",
+      "desc": "He is riding in full course, as if scattering his enemies. In the design he is really a prototypical hero of romantic chivalry. He might almost be Galahad, whose sword is swift and sure because he is clean of heart.",
+      "id": 49,
+      "userId": "undefined"
     }
   ],
   "users": [
